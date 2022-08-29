@@ -1,13 +1,26 @@
+// const { consoleLog } = require("mocha/lib/reporters/base");
+
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  for(let i=0;i<array.length;i++){
+    const compliment=target - array[i]
+ for(let j=i+1;j<array.length;j++){
+     if (array[j] === compliment)return true;
+  }
+ }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n)
+
 */
 
 /* 
   Add your pseudocode here
+  Iterate through each number in the array
 */
 
 /*
@@ -15,20 +28,20 @@ function hasTargetSum(array, target) {
 */
 
 // You can run `node index.js` to view these console logs
-if (require.main === module) {
+// if (require.main === module) {
   // add your own custom tests in here
-  console.log("Expecting: true");
-  console.log("=>", hasTargetSum([3, 8, 12, 4, 11, 7], 10));
-
-  console.log("");
-
-  console.log("Expecting: true");
-  console.log("=>", hasTargetSum([22, 19, 4, 6, 30], 25));
-
-  console.log("");
-
-  console.log("Expecting: false");
-  console.log("=>", hasTargetSum([1, 2, 5], 4));
-}
-
-module.exports = hasTargetSum;
+  // console.log("Expecting: true");
+  // console.log("=>", hasTargetSum([3, 8, 12, 4, 11, 7], 10));
+// 
+  // console.log("");
+// 
+  // console.log("Expecting: true");
+  // console.log("=>", hasTargetSum([22, 19, 4, 6, 30], 25));
+// 
+  // console.log("");
+// 
+  // console.log("Expecting: false");
+  // console.log("=>", hasTargetSum([1, 2, 5], 4));
+// }
+// 
+// module.exports = hasTargetSum;
